@@ -89,6 +89,21 @@
 The app is still being developed actively. It's in beta stage and may not be stable. if you have any
 issues using the app, please let us know.
 
+## Building from source
+
+The project uses the Android Gradle Plugin's SDK downloader to set up a local
+Android SDK automatically. Before running any Gradle tasks, create a
+`local.properties` file in the project root that points to a writable directory
+for the SDK, for example:
+
+```
+sdk.dir=.android-sdk
+```
+
+When `android.builder.sdkDownload=true` is set in `gradle.properties`, running
+`./gradlew tasks` or any other build command will download the required SDK
+components into the specified directory.
+
 ## Contributing
 
 See the [contributing guide](./CONTRIBUTING.md).
